@@ -10,7 +10,7 @@ public class Sort_Asc_order {
 
         for (int i = 1; i <= 3; i++) {
             System.out.print("Enter positive number : ");
-            int num1 = inp.nextInt();``
+            int num1 = inp.nextInt();
         }
     }
 }

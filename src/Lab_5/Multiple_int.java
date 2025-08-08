@@ -16,6 +16,7 @@ public class Multiple_int {
         for(int i = 0; i < amount; i++) {
             System.out.print("input number : ");
             int number = input.nextInt();
+            int findp = number;
 
             if ((number % 2 ) == 0) {
                 even++;
@@ -23,7 +24,7 @@ public class Multiple_int {
 
             if (number == 2) {
                 prime++;
-            } else if (number / number == 1) {
+            } else if (findp / number == 1) {
                 prime++;
             }
 
