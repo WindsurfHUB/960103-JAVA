@@ -16,15 +16,14 @@ public class Multiple_int {
         for(int i = 0; i < amount; i++) {
             System.out.print("input number : ");
             int number = input.nextInt();
-            int findp = number;
 
             if ((number % 2 ) == 0) {
                 even++;
             }
 
-            if (number == 2) {
-                prime++;
-            } else if (findp / number == 1) {
+            if (number <= 1) {
+                continue;
+            } else if (number % number == 0) {
                 prime++;
             }
 

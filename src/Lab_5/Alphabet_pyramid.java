@@ -1,25 +1,27 @@
+package Lab_5;
+
 import java.util.Scanner;
 
 public class Alphabet_pyramid {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of lines: ");
-        int lines = scanner.nextInt();
+        int line = scanner.nextInt();
         scanner.close();
 
-        for (int i = 1; i <= lines; i++) {
-            for (int space = 1; space <= lines - i; space++) {
+        for (int i = 1; i <= line; i++) {
+            for (int space = 1; space <= line - i; space++) {
                 System.out.print("  ");
             }
-            char ch = 'A';
+            char cha = 'A';
             for (int j = 1; j <= i; j++) {
-                System.out.print(ch + " ");
-                ch++;
+                System.out.print(cha + " ");
+                cha++;
             }
-            ch -= 2;
+            cha -= 2;
             for (int j = 1; j < i; j++) {
-                System.out.print(ch + " ");
-                ch--;
+                System.out.print(cha + " ");
+                cha--;
             }
             System.out.println();
         }
