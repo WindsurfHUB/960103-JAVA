@@ -6,8 +6,8 @@ public class Multiple_int {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int even = 0;
-        int prime = 0;
+        String evenNum = "";
+        String primeNum = "";
         int largest = 0;
 
         System.out.print("How many number you want to input : ");
@@ -17,14 +17,18 @@ public class Multiple_int {
             System.out.print("input number : ");
             int number = input.nextInt();
 
-            if ((number % 2 ) == 0) {
-                even++;
+            if (number % 2 == 0) {
+                evenNum += number + " ";
             }
 
-            if (number <= 1) {
-                continue;
-            } else if (number % number == 0) {
-                prime++;
+            int prime = 0;
+            for (int j = 1; j <= number; j++) {
+                if (number % j == 0) {
+                    prime++;
+                }
+            }
+            if (prime == 2) {
+                primeNum += number + " ";
             }
 
             if (number > largest) {
@@ -32,8 +36,8 @@ public class Multiple_int {
             }
 
         }
-        System.out.println("Even number : " + even);
-        System.out.println("Prime number : " + prime);
+        System.out.println("Even number : " + evenNum);
+        System.out.println("Prime number : " + primeNum);
         System.out.println("The largest number is : " + largest);
     }
 }
